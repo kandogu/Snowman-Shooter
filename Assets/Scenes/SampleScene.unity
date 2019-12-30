@@ -659,7 +659,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: affca90c19f561f4089d4c70d4959e16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 15
+  health: 3
 --- !u!50 &1362027741
 Rigidbody2D:
   serializedVersion: 4
@@ -1049,6 +1050,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8942891375868274986, guid: d10a3406be32535429ba39827be3d332,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: -5
+      objectReference: {fileID: 0}
     - target: {fileID: 8942891375868274996, guid: d10a3406be32535429ba39827be3d332,
         type: 3}
       propertyPath: m_ApplyRootMotion
@@ -1057,7 +1063,22 @@ PrefabInstance:
     - target: {fileID: 5901903789772109014, guid: d10a3406be32535429ba39827be3d332,
         type: 3}
       propertyPath: stopDistance
-      value: 6
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5901903789772109014, guid: d10a3406be32535429ba39827be3d332,
+        type: 3}
+      propertyPath: timeBetweenAttacks
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5901903789772109014, guid: d10a3406be32535429ba39827be3d332,
+        type: 3}
+      propertyPath: attackSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5901903789772109014, guid: d10a3406be32535429ba39827be3d332,
+        type: 3}
+      propertyPath: damage
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d10a3406be32535429ba39827be3d332, type: 3}

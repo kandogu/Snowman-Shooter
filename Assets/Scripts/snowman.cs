@@ -13,6 +13,8 @@ public class snowman : MonoBehaviour
 
     private Animator animator;
 
+    public int health;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +41,16 @@ public class snowman : MonoBehaviour
     private void FixedUpdate()
     {
         rb.MovePosition(rb.position + moveAmount * Time.fixedDeltaTime);
+    }
+
+    public void TakeDamage(int damageAmount)
+    {
+        health -= damageAmount;
+
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
 }

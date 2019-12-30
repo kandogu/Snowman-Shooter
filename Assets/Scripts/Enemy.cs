@@ -6,6 +6,9 @@ public class Enemy : MonoBehaviour
 {
     public int health;
     public int speed;
+    public float timeBetweenAttacks;
+    public float attackSpeed;
+    public int damage;
 
     [HideInInspector]
     public Transform player;
