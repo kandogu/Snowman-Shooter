@@ -5,27 +5,24 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public int health;
+    public int speed;
 
-   
-    public void TakeDamage(int damageAmount)
-    {
-        health -= damageAmount;
-
-        if(health <= 0)
-        {
-            Destroy(gameObject);
-        }
-    }
+    [HideInInspector]
+    public Transform player;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        player = GameObject.FindGameObjectWithTag("Snowman").transform;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void TakeDamage(int damageAmount)
     {
-        
+        health -= damageAmount;
+
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }
