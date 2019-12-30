@@ -7,7 +7,7 @@ public class bullet : MonoBehaviour
 
     public float lifeTime;
     public float speed;
-
+    public int damage;
     public GameObject explosion;
 
     // Start is called before the first frame update
@@ -26,5 +26,14 @@ public class bullet : MonoBehaviour
     {
         Instantiate(explosion, transform.position, Quaternion.identity);
         Destroy(gameObject);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "Enemy")
+        {
+            collision.GetComponent<Enemy>().TakeDamage(damage);
+            DestroyBullet();
+        }
     }
 }
